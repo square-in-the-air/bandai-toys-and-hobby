@@ -1,5 +1,6 @@
 import '@/styles/main.scss'
 import StoryblokProvider from '@/components/StoryblokProvider';
+import Header from '@/components/layout/header/Header';
 
 export const metadata = {
 	title: 'Create Next App',
@@ -10,7 +11,10 @@ export default function RootLayout({ children }) {
 	return (
 		<StoryblokProvider>
 			<html lang="en">
-				<body>{children}</body>
+				<body>
+					<Header />
+					{children}
+				</body>
 			</html>
 		</StoryblokProvider>
 	);
