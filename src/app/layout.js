@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/styles/main.scss'
 import StoryblokProvider from '@/components/StoryblokProvider';
 
 export const metadata = {
@@ -7,14 +7,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	const currentYear = new Date().getFullYear();
 	return (
 		<StoryblokProvider>
 			<html lang="en">
-				<body>
-					{children}
-					<footer>All rights reserved © {currentYear} </footer>
-				</body>
+				<body>{children}</body>
 			</html>
 		</StoryblokProvider>
 	);
