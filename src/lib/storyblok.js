@@ -1,3 +1,7 @@
+import EventsList from '@/components/blocks/events-list/EventsList';
+import NewsList from '@/components/blocks/news-list/NewsList';
+import Event from '@/components/templates/Event';
+import NewsArticle from '@/components/templates/NewsArticle';
 import Page from '@/components/templates/Page';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
@@ -13,7 +17,13 @@ export const getStoryblokApi = storyblokInit({
 	accessToken: previewToken || process.env.STORYBLOK_DELIVERY_API_TOKEN,
 	use: [apiPlugin],
 	components: {
+		// Content types
 		page: Page,
+		news_article: NewsArticle,
+		event: Event,
+		// Blocks
+		news_list: NewsList,
+		events_list: EventsList,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */

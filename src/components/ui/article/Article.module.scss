@@ -1,0 +1,127 @@
+.article {
+	&__back {
+		display: inline-block;
+		margin-bottom: var(--space-xl);
+		color: var(--clr-primary);
+		font-weight: 600;
+
+		&:focus-visible {
+			outline: var(--focus-width) solid var(--clr-focus);
+			outline-offset: var(--focus-offset);
+		}
+	}
+
+	&__header {
+		margin-bottom: var(--space-xl);
+	}
+
+	&__meta {
+		margin: 0 0 var(--space-sm);
+		font-size: var(--fs-body-sm);
+		color: var(--clr-text-muted);
+	}
+
+	&__title {
+		margin: 0;
+		font-size: var(--fs-h2);
+		line-height: var(--lh-normal);
+	}
+
+	&__summary {
+		margin: var(--space-md) 0 0;
+		font-size: var(--fs-body-lg);
+		color: var(--clr-text-muted);
+	}
+
+	&__media {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		margin-bottom: var(--space-xl);
+		overflow: hidden;
+		background: var(--clr-border);
+		border-radius: var(--radius-lg);
+	}
+
+	&__image {
+		object-fit: cover;
+	}
+
+	&__facts {
+		display: grid;
+		gap: var(--space-md);
+		margin: 0 0 var(--space-xl);
+		padding: var(--space-lg);
+		background: var(--clr-surface);
+		border-radius: var(--radius-lg);
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		}
+	}
+
+	&__label {
+		font-size: var(--fs-caption);
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--clr-text-muted);
+	}
+
+	&__value {
+		margin: var(--space-xs) 0 0;
+	}
+
+	&__body {
+		max-width: var(--text-measure);
+		line-height: var(--lh-relaxed);
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		h2,
+		h3,
+		h4 {
+			margin: var(--space-xl) 0 var(--space-md);
+			line-height: var(--lh-normal);
+		}
+
+		p,
+		ul,
+		ol {
+			margin: 0 0 var(--space-md);
+		}
+
+		a {
+			color: var(--clr-primary);
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__footer {
+		margin: var(--space-xl) 0 0;
+	}
+
+	&__cta {
+		display: inline-block;
+		padding: var(--space-md) var(--space-xl);
+		color: var(--clr-background);
+		font-weight: 600;
+		text-decoration: none;
+		background: var(--clr-primary);
+		border-radius: var(--radius-full);
+
+		&:hover {
+			background: var(--clr-accent);
+		}
+
+		&:focus-visible {
+			outline: var(--focus-width) solid var(--clr-focus);
+			outline-offset: var(--focus-offset);
+		}
+	}
+}
