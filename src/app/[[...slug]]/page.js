@@ -1,6 +1,6 @@
 import { StoryblokStory } from '@storyblok/react/rsc';
 import { notFound } from 'next/navigation';
-import { getStoryblokApi } from '@/lib/storyblok';
+import { getStoryblokApi, storyblokVersion } from '@/lib/storyblok';
 
 export default async function Page({ params }) {
 	const { slug } = await params;
@@ -11,7 +11,7 @@ export default async function Page({ params }) {
 	let fullSlug = slug ? slug.join('/') : 'home';
 
 	let sbParams = {
-		version: 'draft',
+		version: storyblokVersion,
 	};
 
 	const storyblokApi = getStoryblokApi();

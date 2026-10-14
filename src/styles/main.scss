@@ -1,0 +1,12 @@
+/*
+MAIN
+The global entry point, imported once in src/app/layout.js.
+Loads each folder below through its _index.scss, and the CSS is output
+in this order. Component styles are not loaded here, they live in CSS
+modules next to their components.
+*/
+
+@use 'abstracts';
+@use 'base';
+@use 'layout';
+@use 'utilities';

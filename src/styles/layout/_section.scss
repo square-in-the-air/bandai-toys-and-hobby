@@ -1,0 +1,47 @@
+@use 'sass:list';
+@use 'sass:map';
+@use '../abstracts' as *;
+
+// Vertical padding for page sections: [mobile step, desktop step]
+// The default .section is the smallest size, so there is no --sm.
+$section-sizes: (
+	'md': (
+		'2xl',
+		'3xl',
+	),
+	'lg': (
+		'3xl',
+		'4xl',
+	),
+	'xl': (
+		'4xl',
+		'5xl',
+	),
+);
+
+.section {
+	--section-space: var(--space-xl);
+	padding-block: var(--section-space);
+
+	@media (min-width: map.get($breakpoints, 'md')) {
+		--section-space: var(--space-2xl);
+	}
+
+	@each $size, $steps in $section-sizes {
+		&--#{$size} {
+			--section-space: var(--space-#{list.nth($steps, 1)});
+
+			@media (min-width: map.get($breakpoints, 'md')) {
+				--section-space: var(--space-#{list.nth($steps, 2)});
+			}
+		}
+	}
+
+	&--no-top {
+		padding-top: 0;
+	}
+
+	&--no-bottom {
+		padding-bottom: 0;
+	}
+}

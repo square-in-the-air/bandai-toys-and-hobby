@@ -1,0 +1,12 @@
+/* 
+BASE
+Global styles that apply across the whole site: the root custom
+properties, reset, fonts, typography and colour themes.
+Loaded once from main.scss, and output in the order forwarded below.
+*/
+
+@forward 'root';
+@forward 'reset';
+@forward 'fonts';
+@forward 'typography';
+@forward 'themes';

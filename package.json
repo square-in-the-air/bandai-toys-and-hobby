@@ -6,7 +6,9 @@
 		"dev": "next dev --experimental-https",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"test": "playwright test",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@storyblok/react": "^7.3.1",
@@ -17,7 +19,12 @@
 	},
 	"devDependencies": {
 		"@netlify/plugin-nextjs": "^5.15.13",
+		"@playwright/test": "^1.64.0",
+		"@types/node": "^26.6.5",
 		"eslint": "^9.39.5",
-		"eslint-config-next": "^16.3.5"
+		"eslint-config-next": "^16.3.5",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.6.0",
+		"prettier": "^3.9.10"
 	}
 }
