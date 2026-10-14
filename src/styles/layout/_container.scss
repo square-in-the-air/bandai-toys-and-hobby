@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '../abstracts' as *;
+
+.container {
+	--container-gutter: #{map.get($container-gutters, 'base')};
+	--container-max: none;
+
+	width: 100%;
+	max-width: var(--container-max);
+	margin-inline: auto;
+	padding-inline: var(--container-gutter);
+
+	@each $name, $breakpoint in $breakpoints {
+		@media (min-width: $breakpoint) {
+			--container-gutter: #{map.get($container-gutters, $name)};
+			--container-max: #{map.get($container-widths, $name)};
+		}
+	}
+
+	// Edge to edge, no width cap
+	&--full {
+		--container-max: none;
+	}
+
+	// Tighter column for text heavy pages
+	&--narrow {
+		max-width: min(var(--container-max), 50rem);
+	}
+
+	// Only needed if a container is nested inside another
+	&--no-padding {
+		--container-gutter: 0;
+	}
+}

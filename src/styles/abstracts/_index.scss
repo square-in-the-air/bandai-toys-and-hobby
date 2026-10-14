@@ -1,0 +1,11 @@
+/*
+ABSTRACTS
+The build time tools: Sass variables, mixins and functions.
+Nothing in this folder outputs CSS. Everything is forwarded from here,
+so any file can load it all with one line:
+@use '../abstracts' as *;
+*/
+
+@forward 'variables';
+@forward 'mixins';
+@forward 'functions';

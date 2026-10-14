@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------------------
+// Colour palette (raw values, named by hue)
+// -----------------------------------------------------------------------------
+$clr-black: #1c0530;
+$clr-white: #ffffff;
+$clr-pink: #ff0fa3;
+$clr-purple: #660fa3;
+$clr-mint: #00ffce;
+
+// Neutrals
+$clr-grey-100: #f5f5f7;
+$clr-grey-300: #d9d9de;
+$clr-grey-500: #8a8a94;
+$clr-grey-700: #4a4a55;
+
+// States
+$clr-error: #d70c18;
+$clr-success: #1a7f4b;
+$clr-warning: #b86e00;
+
+// -----------------------------------------------------------------------------
+// Colour roles (components should use these, not the palette above)
+// -----------------------------------------------------------------------------
+$clr-text: $clr-black;
+$clr-text-muted: $clr-grey-700;
+$clr-background: $clr-white;
+$clr-surface: $clr-grey-100;
+$clr-border: $clr-grey-300;
+$clr-primary: $clr-purple;
+$clr-accent: $clr-pink;
+$clr-focus: $clr-purple;
+
+// -----------------------------------------------------------------------------
+// Font families (named by role so a font swap never means a rename)
+// -----------------------------------------------------------------------------
+$ff-heading: var(--font-heading), sans-serif;
+$ff-body: var(--font-body), sans-serif;
+
+// -----------------------------------------------------------------------------
+// Font weights
+// -----------------------------------------------------------------------------
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+
+// -----------------------------------------------------------------------------
+// Font sizes (fluid, using rem so text still respects browser zoom)
+// -----------------------------------------------------------------------------
+$fs-root: 16px;
+$fs-h1: clamp(1.75rem, 1rem + 4vw, 5.75rem); // 28px to 92px
+$fs-h2: clamp(1.5rem, 1rem + 3vw, 3.5rem); // 24px to 56px
+$fs-h3: clamp(1.5rem, 1.25rem + 2vw, 2.5rem); // 24px to 40px
+$fs-h4: clamp(1rem, 1rem + 1.5vw, 2rem); // 16px to 32px
+$fs-body-xl: clamp(1.25rem, 1rem + 1.5vw, 2rem); // 20px to 32px
+$fs-body-lg: clamp(1.125rem, 0.875rem + 1vw, 1.5rem); // 18px to 24px
+$fs-body: clamp(1rem, 0.875rem + 0.75vw, 1.2rem); // 16px to about 19px
+$fs-body-sm: 0.875rem; // 14px
+$fs-caption: 0.75rem; // 12px
+
+// -----------------------------------------------------------------------------
+// Line heights and text measure
+// -----------------------------------------------------------------------------
+$lh-tight: 1;
+$lh-normal: 1.2;
+$lh-relaxed: 1.75;
+$text-measure: 65ch; // maximum line length for body copy
+
+// -----------------------------------------------------------------------------
+// Breakpoints (mobile first, so the base styles are the mobile styles)
+// Add 'xxl': 1920px only if the design needs it.
+// -----------------------------------------------------------------------------
+$breakpoints: (
+	'sm': 768px,
+	'md': 1024px,
+	'lg': 1280px,
+	'xl': 1440px,
+);
+
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+$spacing: (
+	'xs': 0.25rem,
+	'sm': 0.5rem,
+	'md': 1rem,
+	'lg': 1.5rem,
+	'xl': 2rem,
+	'2xl': 3rem,
+	'3xl': 4rem,
+	'4xl': 6rem,
+	'5xl': 8rem,
+);
+
+// -----------------------------------------------------------------------------
+// Container (keys match $breakpoints, plus 'base' for below the first one)
+// -----------------------------------------------------------------------------
+$container-widths: (
+	'sm': 720px,
+	'md': 960px,
+	'lg': 1200px,
+	'xl': 1400px,
+);
+
+$container-gutters: (
+	'base': 1rem,
+	'sm': 1.5rem,
+	'md': 3.2rem,
+	'lg': 3.8rem,
+	'xl': 3.8rem,
+);
+
+// -----------------------------------------------------------------------------
+// Grid
+// -----------------------------------------------------------------------------
+$grid-columns: 12;
+$grid-gap: 1rem;
+
+// -----------------------------------------------------------------------------
+// Border radius (desktop values; the smaller mobile values live in _root.scss)
+// -----------------------------------------------------------------------------
+$radii: (
+	'sm': 4px,
+	'md': 8px,
+	'lg': 12px,
+	'full': 9999px,
+);
+
+// -----------------------------------------------------------------------------
+// Layering
+// -----------------------------------------------------------------------------
+$z-index: (
+	'content': 1,
+	'header': 100,
+	'dropdown': 200,
+	'overlay': 300,
+	'modal': 400,
+	'toast': 500,
+);
+
+// -----------------------------------------------------------------------------
+// Motion
+// -----------------------------------------------------------------------------
+$duration-fast: 150ms;
+$duration-base: 250ms;
+$duration-slow: 400ms;
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+// -----------------------------------------------------------------------------
+// Elevation and focus
+// -----------------------------------------------------------------------------
+$shadow-sm: 0 1px 2px rgba(28, 5, 48, 0.12);
+$shadow-md: 0 4px 12px rgba(28, 5, 48, 0.16);
+$shadow-lg: 0 12px 32px rgba(28, 5, 48, 0.2);
+
+$focus-width: 2px;
+$focus-offset: 2px;
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+$header-height: 5rem;

@@ -1,0 +1,10 @@
+/*
+LAYOUT
+Structural classes used to build pages: the container, grid and section.
+Loaded once from main.scss. Component styles live next to their components
+rather than here.
+*/
+
+@forward 'container';
+@forward 'grid';
+@forward 'section';

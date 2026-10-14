@@ -1,0 +1,79 @@
+// =============================================================================
+// CSS custom properties, generated from the Sass variables in abstracts.
+// Components read these at runtime, e.g. color: var(--clr-text);
+// =============================================================================
+
+@use 'sass:map';
+@use '../abstracts' as *;
+
+:root {
+	// Colour roles
+	--clr-text: #{$clr-text};
+	--clr-text-muted: #{$clr-text-muted};
+	--clr-background: #{$clr-background};
+	--clr-surface: #{$clr-surface};
+	--clr-border: #{$clr-border};
+	--clr-primary: #{$clr-primary};
+	--clr-accent: #{$clr-accent};
+	--clr-focus: #{$clr-focus};
+
+	// States
+	--clr-error: #{$clr-error};
+	--clr-success: #{$clr-success};
+	--clr-warning: #{$clr-warning};
+
+	// Fonts
+	--ff-heading: #{$ff-heading};
+	--ff-body: #{$ff-body};
+
+	// Font sizes
+	--fs-h1: #{$fs-h1};
+	--fs-h2: #{$fs-h2};
+	--fs-h3: #{$fs-h3};
+	--fs-h4: #{$fs-h4};
+	--fs-body-xl: #{$fs-body-xl};
+	--fs-body-lg: #{$fs-body-lg};
+	--fs-body: #{$fs-body};
+	--fs-body-sm: #{$fs-body-sm};
+	--fs-caption: #{$fs-caption};
+
+	// Text
+	--lh-tight: #{$lh-tight};
+	--lh-normal: #{$lh-normal};
+	--lh-relaxed: #{$lh-relaxed};
+	--text-measure: #{$text-measure};
+
+	// Spacing
+	@each $name, $value in $spacing {
+		--space-#{$name}: #{$value};
+	}
+
+	// Motion
+	--duration-fast: #{$duration-fast};
+	--duration-base: #{$duration-base};
+	--duration-slow: #{$duration-slow};
+	--ease-out: #{$ease-out};
+	--ease-in-out: #{$ease-in-out};
+
+	// Elevation and focus
+	--shadow-sm: #{$shadow-sm};
+	--shadow-md: #{$shadow-md};
+	--shadow-lg: #{$shadow-lg};
+	--focus-width: #{$focus-width};
+	--focus-offset: #{$focus-offset};
+
+	// Layout
+	--header-height: #{$header-height};
+
+	// Border radius: smaller on mobile, desktop values from $radii
+	--radius-sm: 3px;
+	--radius-md: 6px;
+	--radius-lg: 8px;
+	--radius-full: #{map.get($radii, 'full')};
+
+	@media (min-width: map.get($breakpoints, 'sm')) {
+		--radius-sm: #{map.get($radii, 'sm')};
+		--radius-md: #{map.get($radii, 'md')};
+		--radius-lg: #{map.get($radii, 'lg')};
+	}
+}
