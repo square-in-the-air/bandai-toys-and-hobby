@@ -1,4 +1,4 @@
-import { getStoryblokApi } from '@/lib/storyblok';
+import { getStoryblokApi, storyblokVersion } from '@/lib/storyblok';
 
 /**
  * Fetches the Header story from the Global Settings folder in Storyblok.
@@ -8,9 +8,12 @@ import { getStoryblokApi } from '@/lib/storyblok';
 export async function getHeader() {
 	try {
 		const storyblokApi = getStoryblokApi();
-		const { data } = await storyblokApi.get('cdn/stories/global-settings/header', {
-			version: 'draft',
-		});
+		const { data } = await storyblokApi.get(
+			'cdn/stories/global-settings/header',
+			{
+				version: storyblokVersion,
+			},
+		);
 		return data.story;
 	} catch (error) {
 		console.error('Could not load the header story from Storyblok', error);
