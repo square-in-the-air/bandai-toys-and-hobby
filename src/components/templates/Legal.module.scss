@@ -1,0 +1,71 @@
+.legal {
+	&__header {
+		margin-bottom: var(--space-xl);
+	}
+
+	&__title {
+		margin: 0;
+		font-size: var(--fs-h2);
+		line-height: var(--lh-normal);
+	}
+
+	&__updated {
+		margin: var(--space-sm) 0 0;
+		font-size: var(--fs-body-sm);
+		color: var(--clr-text-muted);
+	}
+
+	// Long reading text, so the lines stay a comfortable length
+	&__body {
+		max-width: var(--text-measure);
+		line-height: var(--lh-relaxed);
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		h2,
+		h3,
+		h4 {
+			margin: var(--space-xl) 0 var(--space-md);
+			line-height: var(--lh-normal);
+		}
+
+		h2 {
+			font-size: var(--fs-h3);
+		}
+
+		h3,
+		h4 {
+			font-size: var(--fs-h4);
+		}
+
+		p,
+		ul,
+		ol {
+			margin: 0 0 var(--space-md);
+		}
+
+		// The reset removes list markers, and legal text relies on lists
+		ul,
+		ol {
+			padding-left: var(--space-lg);
+		}
+
+		ul {
+			list-style: disc;
+		}
+
+		ol {
+			list-style: decimal;
+		}
+
+		li + li {
+			margin-top: var(--space-xs);
+		}
+
+		a {
+			color: var(--clr-primary);
+		}
+	}
+}

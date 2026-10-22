@@ -1,6 +1,7 @@
 import EventsList from '@/components/blocks/events-list/EventsList';
 import NewsList from '@/components/blocks/news-list/NewsList';
 import Event from '@/components/templates/Event';
+import Legal from '@/components/templates/Legal';
 import NewsArticle from '@/components/templates/NewsArticle';
 import Page from '@/components/templates/Page';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
@@ -21,6 +22,7 @@ export const getStoryblokApi = storyblokInit({
 		page: Page,
 		news_article: NewsArticle,
 		event: Event,
+		legal: Legal,
 		// Blocks
 		news_list: NewsList,
 		events_list: EventsList,
