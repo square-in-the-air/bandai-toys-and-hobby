@@ -18,13 +18,13 @@
 		"sass": "^1.105.1"
 	},
 	"devDependencies": {
-		"@netlify/plugin-nextjs": "^5.15.13",
-		"@playwright/test": "^1.64.0",
-		"@types/node": "^26.6.5",
-		"eslint": "^9.39.5",
-		"eslint-config-next": "^16.3.5",
+		"@netlify/plugin-nextjs": "^5.16.6",
+		"@playwright/test": "^1.65.0",
+		"@types/node": "^26.6.6",
+		"eslint": "^10.14.0",
+		"eslint-config-next": "^16.4.6",
 		"husky": "^9.1.7",
 		"lint-staged": "^17.6.0",
-		"prettier": "^3.9.10"
+		"prettier": "^3.10.1"
 	}
 }
